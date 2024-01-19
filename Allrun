@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+# Go to the case directory
+cd pitzDaily
+
+# Run the blockMesh utility
+checkMesh
+
+#run
+simpleFoam > log
+
+# Run the post-processing utility (e.g., paraFoam)
+paraFoam
+
+# Add any additional post-processing or analysis commands here
+
+echo "Allrun.sh script execution completed."
+
